@@ -1,0 +1,151 @@
+/* Definindo variáveis para cores */
+:root {
+    --cor-principal: #2E8B57; /* Cor verde */
+    --cor-secundaria: #abebad; /* Cor de fundo da seção fullscreen */
+    --cor-fundo: #386324;
+    --cor-texto: #333;
+    --cor-branca: #ffffff;
+    --cor-hover: #f4f4f4;
+}
+
+/* Definindo a cor de fundo e fonte geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-fundo); /* Cor de fundo suave */
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Flexbox no cabeçalho para garantir melhor alinhamento */
+.header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-content h1 {
+    font-size: 36px;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.header-content p {
+    font-size: 18px;
+    margin: 0;
+    font-style: italic;
+}
+
+/* Estilo da navegação */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: var(--cor-branca);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--cor-hover);
+}
+
+/* Seção Fullscreen */
+#fullscreen {
+    height: calc(100vh - 80px); /* 100vh menos a altura do cabeçalho */
+    background-color: var(--cor-secundaria); /* Cor de fundo */
+    color: var(--cor-branca);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column; /* Organiza o título e a frase na vertical */
+    padding: 20px;
+}
+
+#fullscreen h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#fullscreen p {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+/* Estilo das seções principais */
+#apresentacao, #sobre, #projeto, #contato, #endereco {
+    padding: 40px;
+    background-color: var(--cor-branca);
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos das seções */
+section h2 {
+    font-size: 28px;
+    color: var(--cor-principal); /* Cor verde do título */
+}
+
+section p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Responsividade para telas pequenas (mobile) */
+@media (max-width: 600px) {
+    header .header-content h1 {
+        font-size: 1.8rem;
+    }
+
+    header .header-content p {
+        font-size: 1rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    #apresentacao h2, #contato h2 {
+        font-size: 1.5rem;
+    }
+
+    #apresentacao p, #contato p {
+        font-size: 1rem;
+    }
+
+    #fullscreen h2 {
+        font-size: 2rem;
+    }
+
+    #fullscreen p {
+        font-size: 1rem;
+    }
+}
